@@ -18,10 +18,10 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        
+
         <a class="navbar-brand" href="#">
           <img src="./img/vaporozono2.jpg" alt="Logo" class="d-inline-block align-text-top img-fluid">
-         
+
         </a>
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -30,12 +30,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            
+
             <li class="nav-item">
               <a class="nav-link" href="#nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#formulario">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#precios">Limpieza de interior</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -55,7 +58,7 @@
   </header>
 
   <main>
-   
+
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -124,35 +127,126 @@
         </div>
 
       </div>
-      <br><br>
-      
-      <section id="formulario">
+    </div>
+    <br><br>
+
+    <section id="formulario">
+      <div class="container">
         <h2>Contáctanos</h2>
-        <form>
+        <form id="contactForm">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-            <input type="text" class="form-control border border-dark rounded-0" id="exampleFormControlInput2"
-              placeholder="Nombre Completo">
+            <input type="text" class="form-control border border-dark rounded-0" id="contactNombre"
+              placeholder="Nombre Completo" required>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control border border-dark rounded-0" id="exampleFormControlInput1"
-              placeholder="name@example.com">
+            <input type="email" class="form-control border border-dark rounded-0" id="contactEmail"
+              placeholder="name@example.com" required>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
-            <input type="text" class="form-control border border-dark rounded-0" id="exampleFormControlInput3"
-              placeholder="Teléfono">
+            <input type="text" class="form-control border border-dark rounded-0" id="contactTelefono"
+              placeholder="Teléfono" required>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <textarea class="form-control border border-dark rounded-0" id="exampleFormControlTextarea1"
-              rows="3"></textarea>
+            <textarea class="form-control border border-dark rounded-0" id="contactMsg"
+              rows="3" required></textarea>
           </div>
-          <button type="submit" class="btn btn-success rounded-0">Enviar</button>
+          <button type="submit" class="btn btn-success rounded-0" id="contactBtn">Enviar</button>
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section id="precios">
+      <div class="container" style="padding-top: 8rem;">
+
+        <div class="row justify-content-md-center g-1">
+          <div class="col-12 col-md-3" style="min-width: 13rem;">
+            <div class="card border border-primary p-1">
+              <div class="card-body text-center">
+                <h5 class="card-title text-body no-shadow">Estudiante</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-text fw-bold">80%</p>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">* presentar
+                  documentación</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3" style="min-width: 13rem;">
+            <div class="card border border-success p-1">
+              <div class="card-body text-center">
+                <h5 class="card-title text-body no-shadow">Jubilado</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-text fw-bold">50%</p>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">* presentar
+                  documentación</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3" style="min-width: 13rem;">
+            <div class="card border border-warning p-1">
+              <div class="card-body text-center">
+                <h5 class="card-title text-body no-shadow">Empresa</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-text fw-bold">15%</p>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">* presentar
+                  documentación</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container w-50 pt-2">
+        <!-- Texto superior del formulario -->
+        <div class="text-center">
+          <p class="m-0"><sup>VENTA</sup>
+          <h2>VALOR DE LIMPIEZA DE INTERIOR DEL VEHÍCULO $200</h2>
+          </p>
+        </div>
+        <!-- Formulario -->
+        <form class="row g-1 gx-2 formulario" id="formulario">
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control border border-dark rounded-0" placeholder="Nombre" id="nombre">
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control border border-dark rounded-0" placeholder="Apellido" id="apellido">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control border border-dark rounded-0" placeholder="Correo" id="correo">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input type="text" class="form-control border border-dark rounded-0" id="cantidad" placeholder="Cantidad">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cantidad" class="form-label">Categoría</label>
+            <select id="categoria" class="form-select border border-dark rounded-0">
+              <option value="">Sin categoria</option>
+              <option value="estudiante">Estudiante</option>
+              <option value="jubilado">Jubilado</option>
+              <option value="empresa">Empresa</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <p class="alert alert-primary border border-dark rounded-0" id="totalAPagar">Total a Pagar: $</p>
+          </div>
+
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-success rounded-0" type=" button" id="borrar">Borrar</button>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-success rounded-0" type=" button" id="resumen">Resumen</button>
+          </div>
+          <div class="d-grid gap-2 col-12 mx-auto">
+            <button type="submit" class="btn btn-success rounded-0" id="enviar">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
 
 
     <br><br>
@@ -171,7 +265,7 @@
             <p>Nuestro equipo de expertos altamente capacitados se esfuerza por proporcionar un servicio de primera
               calidad utilizando las últimas técnicas y tecnologías del sector. Estamos orgullosos de nuestro compromiso
               con la excelencia y la atención al detalle.</p>
-           
+
           </div>
           <div class="col-lg-6">
             <img src="./img/vaporozono.jpg" alt="Nuestra Empresa" class="img-fluid rounded-circle">
@@ -214,6 +308,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  <script src="contacto.js"></script>
 </body>
 
 </html>
